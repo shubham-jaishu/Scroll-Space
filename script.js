@@ -110,7 +110,7 @@ var tl5 = gsap.timeline({
   scrollTrigger: {
       trigger: "footer h1",
       scroller: ".main",
-      markers: true,
+      // markers: true,
       start: "top 40%",
       end: "top 40%",
       scrub: 3
