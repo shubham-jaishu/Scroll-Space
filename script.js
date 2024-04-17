@@ -36,8 +36,8 @@ var crsr = document.querySelector(".cursor")
 var main = document.querySelector(".main")
 
 document.addEventListener("mousemove", function(detes){
-  crsr.style.left = detes.x + 20 + "px"
-  crsr.style.top = detes.y + 20 + "px"
+  crsr.style.left = detes.x + "px"
+  crsr.style.top = detes.y + "px"
 })
 
 var tl = gsap.timeline({
