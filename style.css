@@ -293,7 +293,7 @@ body {
 
 footer {
   width: 100%;
-  min-height: 110vh;
+  min-height: 100vh;
   background-color: #edbfff;
   padding: 40px 50px;
 }
