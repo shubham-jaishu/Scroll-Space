@@ -46,7 +46,7 @@ var tl = gsap.timeline({
         scroller: ".main",
         start: "top 27%",
         end: "top 0",
-        scrub: 3
+        scrub: 2
     }
 })
 
@@ -107,22 +107,22 @@ tl4.to(".main", {
 })
 
 var tl5 = gsap.timeline({
+  
   scrollTrigger: {
       trigger: "footer h1",
       scroller: ".main",
       // markers: true,
-      start: "top 40%",
-      end: "top 40%",
-      scrub: 3
+      start: "top -30%",
+      end: "top -70%",
+      scrub: 5
   }
 });
 
 tl5.from("footer h1", {
-  y: 30,
-  delay: 1,
+  y: 50,
   duration: 2,
   opacity: 0,
-  stagger: 2 // Adjusted stagger value
+  stagger: 1,
 });
 
 var boxes = document.querySelectorAll(".box")
@@ -136,8 +136,8 @@ boxes.forEach(function(elem){
   })
   elem.addEventListener("mouseleave",  function(){
     elem.style.backgroundColor = "transparent"
-    crsr.style.width = "20px"
-    crsr.style.height = "20px"
+    crsr.style.width = "2px"
+    crsr.style.height = "2px"
     crsr.style.borderRadius = "50%"
     crsr.style.backgroundImage = `url(none)`
   })
@@ -156,3 +156,78 @@ h4.forEach(function(elem){
     purple.style.opacity = "0"
   })
 })
+
+gsap.to("#slider h1", {
+  transform: "translateX(-196%)",
+  scrollTrigger: {
+    trigger: "#slider",
+    scroller: ".main",
+    // markers: true,
+    start: "top -15%",
+    end: "top -90%",
+    scrub: 2,
+    pin: true
+  }
+});
+
+
+var path = `M 100 210 Q 250 210 1430 210`
+
+var finalPath = `M 100 210 Q 250 210 1430 210`
+
+var string = document.querySelector("#string")
+
+string.addEventListener("mousemove", function(dets){
+  path = `M 100 210 Q ${dets.x} ${dets.y} 1430 210`
+  gsap.to("svg path", {
+    attr: {
+      d: path
+    },
+    duration: 0.2
+  })
+})
+
+string.addEventListener("mouseleave", function(){
+  gsap.to("svg path", {
+    attr: {
+      d: finalPath
+    },
+    duration: 0.5,
+    ease: "elastic.out(1.5, 0.1)"
+  })
+})
+
+var tl9 = gsap.timeline()
+
+tl.from("#string h1", {
+  opacity: 0,
+  scale: 0,
+  duration: 1,
+  delay: 1,
+  scrollTrigger: {
+    trigger: "#string h1",
+    scroller: ".main",
+    // markers: true,  
+    start: "top 60%",
+    end: "top 30%",
+    scrub: 3
+  }
+})
+
+tl9.from("#nav img", {
+  y: -40,
+  opacity: 0,
+  duration: 1,
+  rotate: 360
+})
+
+tl9.from("#nav-part2 h4", {
+  y: -30,
+  opacity: 0,
+  duration: 0.3,
+  stagger: 0.2,
+  scale: 3,
+  rotation: function(index) {
+    return index % 2 === 0 ? 30 : -30;
+  }
+});
