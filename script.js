@@ -96,9 +96,9 @@ var tl4 = gsap.timeline({
       trigger: ".page3 h1",
       scroller: ".main",
       // markers: true,
-      start: "top 10%",
-      end: "top 2%",
-      scrub: 3
+      start: "top 0%",
+      end: "top -20%",
+      scrub: 5
   }
 })
 
