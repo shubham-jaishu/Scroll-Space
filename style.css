@@ -172,7 +172,7 @@ body {
 } */
 
 .page3 {
-  min-height: 100vh;
+  min-height: 110vh;
   width: 100%;
   padding-top: 100px;
   padding-top: 100px;
@@ -217,11 +217,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
 
-#apple, #twitter, #github, #facebook{
+#github, #instagram, #facebook, #linkedin, #twitter{
   font-size: 8em;
   background-color: #18191f;
   color: #fff;
@@ -243,16 +243,24 @@ body {
                0 0 200px #0072ff;
 }
 
-#twitter{
+#github{
   animation-delay: 0.3s;
+}
+
+#instagram{
+  animation-delay: 0.5s;
 }
 
 #facebook{
   animation-delay: 0.7s;
 }
 
-#github{
-  animation-delay: 0.1s;
+#linkedin{
+  animation-delay: 0.9s;
+}
+
+#twitter{
+  animation-delay: 1.1s;
 }
 
 @keyframes animate{
