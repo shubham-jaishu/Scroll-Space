@@ -69,6 +69,7 @@ var tl2 = gsap.timeline({
       scroller: ".main",
       start: "top -115%",
       end: "top -120%",
+      // markers: true,
       scrub: 3
   }
 })
@@ -95,9 +96,9 @@ var tl4 = gsap.timeline({
   scrollTrigger: {
       trigger: ".page3 h1",
       scroller: ".main",
-      // markers: true,
+      markers: true,
       start: "top 0%",
-      end: "top -20%",
+      end: "top -50%",
       scrub: 5
   }
 })
@@ -121,6 +122,7 @@ var tl5 = gsap.timeline({
 tl5.from("footer h1", {
   y: 50,
   duration: 2,
+  // scale: 5,
   opacity: 0,
   stagger: 1,
 });
@@ -163,8 +165,8 @@ gsap.to("#slider h1", {
     trigger: "#slider",
     scroller: ".main",
     // markers: true,
-    start: "top -10%",
-    end: "top -80%",
+    start: "top 0%",
+    end: "top -100%",
     scrub: 2,
     pin: true
   }
