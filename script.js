@@ -165,7 +165,7 @@ gsap.to("#slider h1", {
     trigger: "#slider",
     scroller: ".main",
     // markers: true,
-    start: "top 10%",
+    start: "top 0%",
     end: "top -90%",
     scrub: 2,
     pin: true
